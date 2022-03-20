@@ -11,5 +11,6 @@ namespace CoreDepartman.Models
         [Key]
         public int? Id { get; set; }
         public string DepartmanAd { get; set; }
+        public string Detay { get; set; }
     }
 }

@@ -26,7 +26,32 @@ namespace CoreDepartman.Controllers
         [HttpPost]
         public IActionResult DepartmanEkle(Departman d)
         {
-            return View();
+            c.Departman.Add(d);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult DepartmanSil(int id)
+        {
+            var dep = c.Departman.Find(id);
+            c.Departman.Remove(dep);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult DepartmanGetir(int id)
+        {
+            var dep = c.Departman.Find(id);
+            return View("DepartmanGetir", dep);
+        }
+
+        public IActionResult DepartmanGuncelle(Departman d)
+        {
+            var dep = c.Departman.Find(d.Id);
+            dep.DepartmanAd = d.DepartmanAd;
+            c.Departman.Update(dep);
+            c.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
