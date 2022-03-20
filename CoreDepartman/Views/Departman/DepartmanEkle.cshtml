@@ -1,0 +1,13 @@
+﻿@model CoreDepartman.Models.Departman
+@{
+    ViewData["Title"] = "DepartmanEkle";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <b>Departman Adı</b>
+    @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control" })
+    <br/>
+    <button class="btn-info btn">Departman Ekle</button>
+</form>
+

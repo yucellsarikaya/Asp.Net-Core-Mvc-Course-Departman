@@ -9,7 +9,7 @@ namespace CoreDepartman.Models
     public class Personel
     {
         [Key]
-        public int PersonelId { get; set; }
+        public int? PersonelId { get; set; }
         public string Ad { get; set; }
         public string Soyad { get; set; }
         public string Sehir { get; set; }

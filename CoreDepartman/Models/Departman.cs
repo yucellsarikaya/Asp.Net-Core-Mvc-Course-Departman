@@ -9,7 +9,7 @@ namespace CoreDepartman.Models
     public class Departman
     {
         [Key]
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public string DepartmanAd { get; set; }
     }
 }
