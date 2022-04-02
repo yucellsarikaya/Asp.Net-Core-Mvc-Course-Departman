@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ProjeCore.Models;
@@ -12,6 +13,10 @@ namespace ProjeCore.Controllers
     public class PersonelController : Controller
     {
         Context c = new Context();
+
+
+
+        [Authorize]
         public IActionResult Index()
         {
             var degerler = c.Personel.Include(x => x.Birim).ToList();

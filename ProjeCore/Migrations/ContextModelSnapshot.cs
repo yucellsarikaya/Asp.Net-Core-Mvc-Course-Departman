@@ -18,6 +18,24 @@ namespace ProjeCore.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
+            modelBuilder.Entity("ProjeCore.Models.Admin", b =>
+                {
+                    b.Property<int>("AdminID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("KullamiciSifre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("KullaniciAdi")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AdminID");
+
+                    b.ToTable("Admin");
+                });
+
             modelBuilder.Entity("ProjeCore.Models.Birim", b =>
                 {
                     b.Property<int>("BirimID")

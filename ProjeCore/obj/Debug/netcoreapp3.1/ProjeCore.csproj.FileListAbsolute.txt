@@ -157,3 +157,4 @@ C:\Users\sarik\Desktop\Course\Asp.Net-Core-Mvc-Course-Departman\ProjeCore\obj\De
 C:\Users\sarik\Desktop\Course\Asp.Net-Core-Mvc-Course-Departman\ProjeCore\obj\Debug\netcoreapp3.1\Razor\Views\Personel\Index.cshtml.g.cs
 C:\Users\sarik\Desktop\Course\Asp.Net-Core-Mvc-Course-Departman\ProjeCore\obj\Debug\netcoreapp3.1\Razor\Views\Personel\YeniPersonel.cshtml.g.cs
 C:\Users\sarik\Desktop\Course\Asp.Net-Core-Mvc-Course-Departman\ProjeCore\obj\Debug\netcoreapp3.1\Razor\Views\Default\BirimDetay.cshtml.g.cs
+C:\Users\sarik\Desktop\Course\Asp.Net-Core-Mvc-Course-Departman\ProjeCore\obj\Debug\netcoreapp3.1\Razor\Views\Login\Login.cshtml.g.cs

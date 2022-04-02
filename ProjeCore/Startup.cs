@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
@@ -24,6 +25,7 @@ namespace ProjeCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(x => { x.LoginPath = "/Login/Login/"; });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +42,7 @@ namespace ProjeCore
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+            app.UseAuthentication();
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -52,7 +55,6 @@ namespace ProjeCore
                     name: "default",
                     pattern: "{controller=Default}/{action=Index}/{id?}");
             });
-
         }
     }
 }

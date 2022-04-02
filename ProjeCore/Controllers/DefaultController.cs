@@ -55,6 +55,8 @@ namespace ProjeCore.Controllers
         public IActionResult BirimDetay(int id)
         {
             var degerler = c.Personel.Where(x => x.BirimID == id).ToList();
+            var birimAd = c.Birim.Where(x => x.BirimID == id).Select(y => y.BirimAd).FirstOrDefault();
+            ViewBag.brmAd = birimAd;
             return View(degerler);
         }
     }

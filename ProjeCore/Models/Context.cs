@@ -15,5 +15,6 @@ namespace ProjeCore.Models
 
         public DbSet<Birim> Birim { get; set; }
         public DbSet<Personel> Personel { get; set; }
+        public DbSet<Admin> Admin { get; set; }
     }
 }
